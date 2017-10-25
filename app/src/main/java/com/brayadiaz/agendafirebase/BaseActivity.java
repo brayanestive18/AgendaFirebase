@@ -79,6 +79,8 @@ public class BaseActivity extends AppCompatActivity
             intent = new Intent(getApplication(), MainActivity.class);
         } else if (id == R.id.nav_gallery) {
             intent = new Intent(getApplication(), ListaActivity.class);
+        } else if (id == R.id.agedaSQLite) {
+            intent = new Intent(getApplication(), AgendaSQLite.class);
         }
 
         startActivity(intent);
