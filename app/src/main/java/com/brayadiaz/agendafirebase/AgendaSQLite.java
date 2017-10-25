@@ -49,10 +49,12 @@ public class AgendaSQLite extends BaseActivity
         email = eEmail.getText().toString();
         phone = ePhone.getText().toString();
 
+        ContentValues data = new ContentValues();
+
         switch (id){
             case R.id.bCreate:
 
-                ContentValues data = new ContentValues();
+                //ContentValues data = new ContentValues();
                 data.put("name",name);
                 data.put("phone",phone);
                 data.put("email",email);
@@ -61,9 +63,7 @@ public class AgendaSQLite extends BaseActivity
                 clean();
 
                 break;
-            case R.id.bUpdate:
 
-                break;
             case R.id.bRead:
 
                 Cursor c = dbContactos.rawQuery("SELECT * FROM contactos WHERE name='"+name+"'",null);
@@ -75,7 +75,23 @@ public class AgendaSQLite extends BaseActivity
                 }
 
                 break;
+
+            case R.id.bUpdate:
+
+                //ContentValues data = new ContentValues();
+                //data.put("name",name);
+                data.put("phone",phone);
+                data.put("email",email);
+
+                dbContactos.update("contactos", data, "name = '"+name+"'",null);
+                clean();
+
+                break;
+
             case R.id.bDelete:
+
+                dbContactos.delete("contactos", "name = '"+name+"'",null);
+                clean();
 
                 break;
         }

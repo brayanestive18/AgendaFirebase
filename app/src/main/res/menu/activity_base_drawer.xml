@@ -14,6 +14,10 @@
             android:id="@+id/agedaSQLite"
             android:icon="@drawable/ic_menu_send"
             android:title="Agenda SQL" />
+        <item
+            android:id="@+id/ListaSQLite"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Lista SQL" />
 
     </group>
 
