@@ -81,7 +81,7 @@ public class BaseActivity extends AppCompatActivity
             intent = new Intent(getApplication(), ListaActivity.class);
         } else if (id == R.id.agedaSQLite) {
             intent = new Intent(getApplication(), AgendaSQLite.class);
-        } else if (id == R.id.agedaSQLite) {
+        } else if (id == R.id.ListaSQLite) {
             intent = new Intent(getApplication(), ListSQLite.class);
         }
 
